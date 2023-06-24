@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ============== common codes strat here ============= */
 body{
     background-color: #ffffff;
 }
@@ -17,6 +19,7 @@ ul{
     margin: 0;
     padding: 0;
 }
+/* ============== common codes end here ============= */
 
 /* ============== header Section code strat here ============= */
 .header{
@@ -73,7 +76,7 @@ ul{
     color: #223137;
     transition: 1s;
 }
-/* menubar code start */
+/* menubar code end */
 
 /* hero section code start here */
 .hero{
@@ -82,9 +85,11 @@ ul{
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 700px;
+    height: 750px;
     position: relative;
 }
+
+/* timer clock section start */
 .hero .timer_div{
     background: linear-gradient(104.94deg, #223137 20.99%, #FFCB00 116.6%);
     border-radius: 100px;
@@ -131,6 +136,162 @@ ul{
 .hero .timer_div .cowndown_div table tr td:last-child{
     border-right: none;
 }
+/* timer clock section end */
+
+/* quiz section start */
+.quiz_section{
+    background-color: #223137;
+    width: 600px;
+    height: 750px;
+    float: right;
+    position: relative;
+}
+.quiz-area{
+	padding: 50px;
+	border-radius: 0px 15px 15px 0px;
+}
+.from-dots{
+	margin: 30px 0px 50px 0px;
+}
+.tab {
+    display: none;
+}
+#quizForm h3{
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFCB00;
+}
+.tab{
+    position: absolute;
+    right: 30px;
+    height: 500px;
+}
+.questions_tab{
+    height: 500px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 53px 0px rgba(255, 245, 0, 0.59);
+    border-radius: 25px;
+    padding: 30px 40px 80px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.questions_tab .que_num{
+    width: 70px;
+    height: 70px;
+    background-color: #223137;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.questions_tab .que_num span{
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFCB00;
+}
+.questions_tab .quiz_options_area h2{
+    font-size: 30px;
+    color: #223137;
+    font-weight: bold;
+    width: 600px;
+}
+.questions_tab .quiz_options_area .que_options{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 320px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.questions_tab .quiz_options_area .que_options .radio-custom-label{
+    width: 48%;
+    background: #F4F4F4;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #223137;
+    font-weight: 700;
+}
+.questions_tab .quiz_options_area .que_options input[type="radio"]{
+    display: none;
+}
+.radio-custom-label.one, .radio-custom-label.two{
+    margin-bottom: 20px;
+}
+.questions_tab .quiz_options_area .que_options input[type="radio"]:checked + label{
+    background-color: #223137;
+    color:#FFCB00;
+}
+
+#quizForm .indicator_btns{
+    position: absolute;
+    bottom: 50px;
+    left: -80px;
+}
+#quizForm #nextBtn {
+  background-color: #FFCB00;
+  color: #223137;
+  border: none;
+  padding: 20px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#quizForm #prevBtn {
+    background-color: #ffffff;
+    color: #223137;
+    border: none;
+    padding: 20px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+#quizForm .indicator_btns button:hover {
+  opacity: 0.8;
+}
+
+/* Make circles that indicate the steps of the form: */
+.from-dots{
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 15px;
+}
+.step {
+  height: 15px;
+  width: 20%;
+  background-color: #ffffff;
+  border: none;
+  display: inline-block;
+  opacity: 0.5;
+}
+.step_one{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.step_five{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.step.active {
+  opacity: .6;
+  background: #FFCB00;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #FFCB00;
+  opacity: 1;
+}
+
+/* quiz section end */
 /* hero section code end here */
 /* ============== header Section code end here ============= */
 
@@ -532,6 +693,9 @@ ul{
 /* ============== Footer code strat here ============= */
 .footer{
     background-image: url(../images/footer_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 80px 0;
     font-family: 'Inter', sans-serif;
 }
